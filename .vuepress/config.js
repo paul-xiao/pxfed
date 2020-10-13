@@ -8,21 +8,21 @@ module.exports = {
         logo: '/logo.png',
         nav: [
             { text: 'Home', link: '/' },
-            { text: 'Nodejs', link: '/nodejs/' },
-            { text: 'Vue', link: '/vue/' },
-            { text: 'Solutions', link: '/solutions/' },
             { text: 'Esx', link: '/esx/' },
+            { text: 'Vue', link: '/vue/' },
+            { text: 'Nodejs', link: '/nodejs/' },
+            { text: 'Solutions', link: '/solutions/' },
+           
         ],
         lastUpdated: 'Last Updated',
         sidebar: {
-            '/nodejs/': [{
-                title: 'Nodejs',
+            '/esx/':[{
+                title: 'Esx',
                 collapsable: false,
                 children: [
                     ['', '介绍'],
-                    'async_hooks',
-                    'buffer',
-                    'child_process'
+                    'es6',
+                    'es9'
                 ]
             }],
             '/vue/':[{
@@ -33,20 +33,23 @@ module.exports = {
                     
                 ]
             }],
+            '/nodejs/': [{
+                title: 'Nodejs',
+                collapsable: false,
+                children: [
+                    ['', '介绍'],
+                    'async_hooks',
+                    'buffer',
+                    'child_process'
+                ]
+            }],
             '/solutions/':[{
                 title: 'Solutions',
                 collapsable: false,
                 children: [
                     ['', '介绍'],
                 ]
-            }],
-            '/esx/':[{
-                title: 'Esx',
-                collapsable: false,
-                children: [
-                    ['', '介绍'],
-                ]
-            }]
+            }]          
         },
         smoothScroll: true
     }

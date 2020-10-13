@@ -20,9 +20,10 @@ ECMAScript version history
 
 
 
-EcmaScript 各版本
+## 版本特性
 ![image](/esx.jpeg)
-## 各版本新增特性
+
+
 - Es5
   - bind
   - apply

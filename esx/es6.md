@@ -1,6 +1,6 @@
 # ES6
 
-## promise
+## Promise
 
 ### 语法
 ```js
@@ -24,6 +24,7 @@ Promise.prototype.then 和  Promise.prototype.catch 方法返回promise 对象�
 ### 实现原理
 
 [Promise/A+规范](https://promisesaplus.com/)
+[测试](https://github.com/promises-aplus/promises-tests)
 
 ```js
 class Promise{
@@ -37,3 +38,6 @@ class Promise{
 
 
 ```
+
+
+## Class
