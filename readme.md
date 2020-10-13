@@ -1,26 +1,28 @@
 ---
 home: true
 heroImage: /logo.png
-heroText: Hero 标题
-tagline: Hero 副标题
-actionText: 快速上手 →
-actionLink: /guide/
+heroText: PXFED
+tagline: 以文档的形式记录知识盲点，温故知新
+actionText: 了解更多 →
+actionLink: /nodejs/
 features:
-- title: 简洁至上
-  details: 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。
-- title: Vue驱动
-  details: 享受 Vue + webpack 的开发体验，在 Markdown 中使用 Vue 组件，同时可以使用 Vue 来开发自定义主题。
-- title: 高性能
-  details: VuePress 为每个页面预渲染生成静态的 HTML，同时在页面被加载的时候，将作为 SPA 运行。
-footer: MIT Licensed | Copyright © 2018-present Evan You
+- title: 基本概念
+  details: 记录容易忽略的基本概念，包括常用api及基本应用
+- title: 解决方案
+  details: web开发过程中常见问题及解决方案
+- title: 核心框架
+  details: vue/react使用技巧及源码分析
+footer: authored by paulxiaooo
 ---
 
-### test drive
+### Checkout
 
 ```js
 
-const a = 0
+git clone git@github.com:paul-xiao/pxfed.git
+
+npm i && npm run dev
 
 
 ```
-> let's gooo
+> Shall we ?

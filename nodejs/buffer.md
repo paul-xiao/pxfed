@@ -8,4 +8,4 @@ buffer属于堆外内存
 - Buffer.alloc(size: number, fill?: string | number | Buffer, encoding?: BufferEncoding): Buffer
 - Buffer.form()
 
-## sfasfdfsfsdfds
+## 应用

@@ -59,7 +59,7 @@ function promiseResolve(asyncId) { }
 
 
 
-## 用法
+## 应用
 
 ```js
 

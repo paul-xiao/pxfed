@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/paul-xiao/pxfed/issues"
   },
-  "homepage": "https://github.com/paul-xiao/pxfed#readme"
+  "homepage": "https://github.com/paul-xiao/pxfed#readme",
+  "dependencies": {
+    "vuepress": "^1.6.0"
+  }
 }
