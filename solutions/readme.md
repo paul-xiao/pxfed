@@ -1,0 +1,19 @@
+# featrue list
+- [H5/rem适配方案](https://www.cnblogs.com/chenhuichao/p/11763135.html)
+- [如何解决1px的问题](https://www.jianshu.com/p/3a262758abcf)
+- [阅读量统计：busuanzi](http://ibruce.info/2015/04/04/busuanzi/)
+- [web安全](https://linux.cn/article-6417-1.html)
+- [Serverless无服务端方案](https://www.jianshu.com/p/92632d6c2269)
+- 中途岛/中间层方案
+- 首屏性能提升方案
+- 长列表无线滚动方案
+- API接口鉴权方案
+- 数据埋点方案
+- 视频直播点播解决方案
+- 购物车解决方案
+- 商品参数管理解决方案
+- 订单商品跟踪解决方案
+- 物流跟踪解决方案
+- RBAC 权限管理解决方案
+- 验证码解决方案
+- 短信解决方案

@@ -12,11 +12,11 @@ module.exports = {
             { text: 'Vue', link: '/vue/' },
             { text: 'Nodejs', link: '/nodejs/' },
             { text: 'Solutions', link: '/solutions/' },
-           
+
         ],
         lastUpdated: 'Last Updated',
         sidebar: {
-            '/esx/':[{
+            '/esx/': [{
                 title: 'Esx',
                 collapsable: false,
                 children: [
@@ -25,12 +25,12 @@ module.exports = {
                     'es9'
                 ]
             }],
-            '/vue/':[{
+            '/vue/': [{
                 title: 'Vue',
                 collapsable: false,
                 children: [
                     ['', '介绍'],
-                    
+
                 ]
             }],
             '/nodejs/': [{
@@ -43,13 +43,15 @@ module.exports = {
                     'child_process'
                 ]
             }],
-            '/solutions/':[{
+            '/solutions/': [{
                 title: 'Solutions',
                 collapsable: false,
                 children: [
                     ['', '介绍'],
+                    'rem',
+                    'app'
                 ]
-            }]          
+            }]
         },
         smoothScroll: true
     }
