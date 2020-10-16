@@ -430,3 +430,15 @@ class StaticMethodCall {
     }
 }
 ```
+
+### 对象数组去重
+
+```js
+
+const tmp = {};
+const result = arr.reduce((item, next)=>{
+    tmp[next.key] ? '' : tmp[next.key] = true && item.push(next);
+    return item;
+},[])
+
+```

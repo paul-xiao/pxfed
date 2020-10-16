@@ -28,3 +28,73 @@ module.exports={
     },
 }    
 ```
+
+## vueCLI3 vant rem 解决方案
+
+- 自动按需引入组件
+
+```js
+npm i babel-plugin-import -D
+// babel-plugin-import 是一款 babel 插件，它会在编译过程中将 import 的写法自动转换为按需引入的方式
+
+
+//babel.config.js 
+module.exports = { plugins: [ ['import', { libraryName: 'vant', libraryDirectory: 'es', style: true }, 'vant'] ] };
+
+// 接着你可以在代码中直接引入 Vant 组件
+// 通过配置会自动引入样式
+import { Button } from 'vant'
+
+//注意： 配置按需加载后不允许全局引入 
+import Vant from 'vant';
+import 'vant/lib/index.css';
+
+Vue.use(Vant); //Uncaught ReferenceError: Vant is not defined
+
+```
+
+- px单位转化为rem
+
+```js
+
+npm install autoprefixer postcss-pxtorem --save-dev
+//vue.config.js
+
+const autoprefixer = require('autoprefixer')
+const pxtorem = require('postcss-pxtorem')
+module.exports = {
+  css: {
+    loaderOptions: {
+      postcss: {
+        plugins: [
+          autoprefixer(),
+          pxtorem({
+            rootValue: 37.5, //对于宽度为750px的设计图，由于rootValue: 37.5为基准，在写css时候设计图上文字大小多少像素就写多少像素即可
+            propList: ['*'],
+            // 该项仅在使用 Circle 组件时需要
+            // 原因参见 https://github.com/youzan/vant/issues/1948
+            selectorBlackList: ['van-circle__layer']
+          })
+        ]
+      }
+    }
+  }
+
+```
+
+- rem适配
+```js
+
+　//安装 
+
+　npm i -S amfe-flexible
+
+　//main.js引入
+
+  import 'amfe-flexible'
+
+```
+
+
+
+
