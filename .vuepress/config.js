@@ -41,6 +41,13 @@ module.exports = {
           children: [['', '介绍'], 'rem', 'app'],
         },
       ],
+      '/db/': [
+        {
+          title: 'mysql',
+          collapsable: false,
+          children: ['mysql'],
+        },
+      ],
     },
     smoothScroll: true,
   },

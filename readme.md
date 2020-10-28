@@ -6,12 +6,12 @@ tagline: 以文档的形式记录知识盲点，温故知新
 actionText: 了解更多 →
 actionLink: /nodejs/
 features:
-- title: 基本概念
-  details: 记录容易忽略的基本概念，包括常用api及基本应用
-- title: 解决方案
-  details: web开发过程中常见问题及解决方案
-- title: 核心框架
-  details: vue/react使用技巧及源码分析
+  - title: 基本概念
+    details: 记录容易忽略的基本概念，包括常用api及基本应用
+  - title: 解决方案
+    details: web开发过程中常见问题及解决方案
+  - title: 核心框架
+    details: vue/react使用技巧及源码分析
 footer: authored by paulxiaooo
 ---
 
@@ -25,4 +25,11 @@ npm i && npm run dev
 
 
 ```
-> Shall we ?
+
+### Todos
+
+- 2020/10/27
+  - es6 proxy
+  - vue diff 算法
+  - ts 基础类型
+  - node Stream
