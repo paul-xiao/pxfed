@@ -33,3 +33,4 @@ npm i && npm run dev
   - vue diff 算法
   - ts 基础类型
   - node Stream
+  - node redis/Mq
