@@ -1,5 +1,14 @@
 # ts
 
+## install
+
+```sh
+npm install -g typescript
+
+tsc -v
+
+```
+
 ### 基础类型
 
 变量声明

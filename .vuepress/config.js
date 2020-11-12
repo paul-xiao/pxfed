@@ -17,7 +17,7 @@ module.exports = {
         {
           title: 'Esx',
           collapsable: false,
-          children: [['', '介绍'], 'es6', 'es9'],
+          children: [['', '介绍'], 'es5', 'es6', 'es9'],
         },
       ],
       '/vue/': [
