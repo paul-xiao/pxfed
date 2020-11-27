@@ -24,21 +24,41 @@ module.exports = {
         {
           title: 'Vue',
           collapsable: false,
-          children: [['', '介绍'], 'reactive'],
+          children: [
+            ['', '介绍'],
+            'reactive',
+            'diff',
+            'keepalive',
+            'namespace',
+            'ssr',
+            'vue_router',
+          ],
         },
       ],
       '/nodejs/': [
         {
           title: 'Nodejs',
           collapsable: false,
-          children: [['', '介绍'], 'async_hooks', 'buffer', 'child_process'],
+          children: [
+            ['', '介绍'],
+            'async_hooks',
+            'buffer',
+            'child_process',
+            'crypto',
+            'http',
+            'kafka',
+            'load_balancing',
+            'rabbitMQ',
+            'redis',
+            'websocket',
+          ],
         },
       ],
       '/solutions/': [
         {
           title: 'Solutions',
           collapsable: false,
-          children: [['', '介绍'], 'rem', 'app'],
+          children: [['', '介绍'], 'rem', 'app', 'axios', 'im', 'jsdoc'],
         },
       ],
       '/db/': [

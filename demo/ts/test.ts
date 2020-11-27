@@ -35,4 +35,6 @@ var customer:IPerson = {
     lastName:"Hanks", 
     sayHi: ():string =>{return "Hi there"} 
 } 
+
+
  
