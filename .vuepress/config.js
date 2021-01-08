@@ -68,6 +68,13 @@ module.exports = {
           children: ['mysql'],
         },
       ],
+      '/dv/': [
+        {
+          title: '数据可视化',
+          collapsable: false,
+          children: [['', '介绍']],
+        },
+      ],
     },
     smoothScroll: true,
   },
