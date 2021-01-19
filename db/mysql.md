@@ -1,9 +1,24 @@
-# mysql
+## 索引
+
+```sql
+--创建
+CREATE INDEX tagIndex ON user(tag);
+
+-- 查看
+show index FROM user
+
+-- 执行
+
+EXPLAIN SELECT * from user WHERE tag = ''
+
+--删除
+alter TABLE user drop index tagIndex
+```
 
 ## 数据插入优化
 
 ```js
-;(async function () {
+;(async function() {
   const mysql = require('mysql2/promise')
 
   const connection = await mysql.createConnection({

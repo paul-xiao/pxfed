@@ -10,6 +10,9 @@ module.exports = {
       { text: 'Vue', link: '/vue/' },
       { text: 'Nodejs', link: '/nodejs/' },
       { text: 'Solutions', link: '/solutions/' },
+      { text: 'DB', link: '/db/' },
+      { text: 'Dv', link: '/dv/' },
+      { text: 'Py', link: '/py/' },
     ],
     lastUpdated: 'Last Updated',
     sidebar: {
@@ -65,12 +68,19 @@ module.exports = {
         {
           title: 'mysql',
           collapsable: false,
-          children: ['mysql'],
+          children: [['', '介绍'], 'mysql'],
         },
       ],
       '/dv/': [
         {
           title: '数据可视化',
+          collapsable: false,
+          children: [['', '介绍']],
+        },
+      ],
+      '/py/': [
+        {
+          title: 'Python',
           collapsable: false,
           children: [['', '介绍']],
         },
