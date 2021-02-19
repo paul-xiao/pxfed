@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>异步钩子 | PXFED</title>
+    <meta name="generator" content="VuePress 1.6.0">
+    <link rel="icon" href="/pxfed/favicon.ico">
+    <meta name="description" content="Just playing around">
+    <link rel="preload" href="/pxfed/assets/css/0.styles.79d2b74d.css" as="style"><link rel="preload" href="/pxfed/assets/js/app.391c752e.js" as="script"><link rel="preload" href="/pxfed/assets/js/2.197eb809.js" as="script"><link rel="preload" href="/pxfed/assets/js/17.e32d600f.js" as="script"><link rel="prefetch" href="/pxfed/assets/js/10.f981e27f.js"><link rel="prefetch" href="/pxfed/assets/js/11.50cedf1f.js"><link rel="prefetch" href="/pxfed/assets/js/12.5eaf23ae.js"><link rel="prefetch" href="/pxfed/assets/js/13.51a07a3e.js"><link rel="prefetch" href="/pxfed/assets/js/14.6499c987.js"><link rel="prefetch" href="/pxfed/assets/js/15.00256b2a.js"><link rel="prefetch" href="/pxfed/assets/js/16.b5fe4aca.js"><link rel="prefetch" href="/pxfed/assets/js/18.b1e50332.js"><link rel="prefetch" href="/pxfed/assets/js/19.d1de6dc1.js"><link rel="prefetch" href="/pxfed/assets/js/20.a3867248.js"><link rel="prefetch" href="/pxfed/assets/js/21.ecaaacfc.js"><link rel="prefetch" href="/pxfed/assets/js/22.180ace57.js"><link rel="prefetch" href="/pxfed/assets/js/23.f07d1b4f.js"><link rel="prefetch" href="/pxfed/assets/js/24.51665be9.js"><link rel="prefetch" href="/pxfed/assets/js/25.053f7e9a.js"><link rel="prefetch" href="/pxfed/assets/js/26.cb3007ea.js"><link rel="prefetch" href="/pxfed/assets/js/27.e00f13e6.js"><link rel="prefetch" href="/pxfed/assets/js/28.6595e37e.js"><link rel="prefetch" href="/pxfed/assets/js/29.9750a7bb.js"><link rel="prefetch" href="/pxfed/assets/js/3.9f21a8e2.js"><link rel="prefetch" href="/pxfed/assets/js/30.f97323f5.js"><link rel="prefetch" href="/pxfed/assets/js/31.00250396.js"><link rel="prefetch" href="/pxfed/assets/js/32.f4b3cf1e.js"><link rel="prefetch" href="/pxfed/assets/js/33.50557d64.js"><link rel="prefetch" href="/pxfed/assets/js/34.0e0bb241.js"><link rel="prefetch" href="/pxfed/assets/js/35.e507bf03.js"><link rel="prefetch" href="/pxfed/assets/js/36.545140ca.js"><link rel="prefetch" href="/pxfed/assets/js/37.4333939e.js"><link rel="prefetch" href="/pxfed/assets/js/38.1210eda9.js"><link rel="prefetch" href="/pxfed/assets/js/39.5e31bab1.js"><link rel="prefetch" href="/pxfed/assets/js/4.f23e151d.js"><link rel="prefetch" href="/pxfed/assets/js/40.705d7c1d.js"><link rel="prefetch" href="/pxfed/assets/js/41.33c976ce.js"><link rel="prefetch" href="/pxfed/assets/js/42.1ced0f2e.js"><link rel="prefetch" href="/pxfed/assets/js/43.4b446d33.js"><link rel="prefetch" href="/pxfed/assets/js/44.402b0312.js"><link rel="prefetch" href="/pxfed/assets/js/45.e933ff8c.js"><link rel="prefetch" href="/pxfed/assets/js/46.426aa448.js"><link rel="prefetch" href="/pxfed/assets/js/47.686c8539.js"><link rel="prefetch" href="/pxfed/assets/js/48.0ab858a7.js"><link rel="prefetch" href="/pxfed/assets/js/5.ff934079.js"><link rel="prefetch" href="/pxfed/assets/js/6.761b8afb.js"><link rel="prefetch" href="/pxfed/assets/js/7.d9e89e79.js"><link rel="prefetch" href="/pxfed/assets/js/8.898087c3.js"><link rel="prefetch" href="/pxfed/assets/js/9.ccb0218d.js">
+    <link rel="stylesheet" href="/pxfed/assets/css/0.styles.79d2b74d.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/pxfed/" class="home-link router-link-active"><img src="/pxfed/logo.png" alt="PXFED" class="logo"> <span class="site-name can-hide">PXFED</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/pxfed/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/pxfed/esx/" class="nav-link">
+  Esx
+</a></div><div class="nav-item"><a href="/pxfed/vue/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/pxfed/nodejs/" class="nav-link router-link-active">
+  Nodejs
+</a></div><div class="nav-item"><a href="/pxfed/solutions/" class="nav-link">
+  Solutions
+</a></div><div class="nav-item"><a href="/pxfed/db/" class="nav-link">
+  DB
+</a></div><div class="nav-item"><a href="/pxfed/dv/" class="nav-link">
+  Dv
+</a></div><div class="nav-item"><a href="/pxfed/py/" class="nav-link">
+  Py
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/pxfed/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/pxfed/esx/" class="nav-link">
+  Esx
+</a></div><div class="nav-item"><a href="/pxfed/vue/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/pxfed/nodejs/" class="nav-link router-link-active">
+  Nodejs
+</a></div><div class="nav-item"><a href="/pxfed/solutions/" class="nav-link">
+  Solutions
+</a></div><div class="nav-item"><a href="/pxfed/db/" class="nav-link">
+  DB
+</a></div><div class="nav-item"><a href="/pxfed/dv/" class="nav-link">
+  Dv
+</a></div><div class="nav-item"><a href="/pxfed/py/" class="nav-link">
+  Py
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Nodejs</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/pxfed/nodejs/" aria-current="page" class="sidebar-link">介绍</a></li><li><a href="/pxfed/nodejs/async_hooks.html" aria-current="page" class="active sidebar-link">异步钩子</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pxfed/nodejs/async_hooks.html#api" class="sidebar-link">API</a></li><li class="sidebar-sub-header"><a href="/pxfed/nodejs/async_hooks.html#应用" class="sidebar-link">应用</a></li></ul></li><li><a href="/pxfed/nodejs/buffer.html" class="sidebar-link">Buffer</a></li><li><a href="/pxfed/nodejs/child_process.html" class="sidebar-link">子进程（child_process）</a></li><li><a href="/pxfed/nodejs/crypto.html" class="sidebar-link">加密</a></li><li><a href="/pxfed/nodejs/http.html" class="sidebar-link">http</a></li><li><a href="/pxfed/nodejs/kafka.html" class="sidebar-link">kafka</a></li><li><a href="/pxfed/nodejs/load_balancing.html" class="sidebar-link">负载均衡</a></li><li><a href="/pxfed/nodejs/rabbitMQ.html" class="sidebar-link">rabbitMq</a></li><li><a href="/pxfed/nodejs/redis.html" class="sidebar-link">redis</a></li><li><a href="/pxfed/nodejs/websocket.html" class="sidebar-link">socket.io</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="异步钩子"><a href="#异步钩子" class="header-anchor">#</a> 异步钩子</h1> <blockquote><p>实验</p></blockquote> <p>The async_hooks module provides an API to <em>track asynchronous resources</em>. It can be accessed using:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> async_hooks <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'async_hooks'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="api"><a href="#api" class="header-anchor">#</a> API</h2> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> async_hooks <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'async_hooks'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Return the ID of the current execution context.</span>
+<span class="token keyword">const</span> eid <span class="token operator">=</span> async_hooks<span class="token punctuation">.</span><span class="token function">executionAsyncId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Return the ID of the handle responsible for triggering the callback of the</span>
+<span class="token comment">// current execution scope to call.</span>
+<span class="token keyword">const</span> tid <span class="token operator">=</span> async_hooks<span class="token punctuation">.</span><span class="token function">triggerAsyncId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Create a new AsyncHook instance. All of these callbacks are optional.</span>
+<span class="token keyword">const</span> asyncHook <span class="token operator">=</span>
+    async_hooks<span class="token punctuation">.</span><span class="token function">createHook</span><span class="token punctuation">(</span><span class="token punctuation">{</span> init<span class="token punctuation">,</span> before<span class="token punctuation">,</span> after<span class="token punctuation">,</span> destroy<span class="token punctuation">,</span> promiseResolve <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Allow callbacks of this AsyncHook instance to call. This is not an implicit</span>
+<span class="token comment">// action after running the constructor, and must be explicitly run to begin</span>
+<span class="token comment">// executing callbacks.</span>
+asyncHook<span class="token punctuation">.</span><span class="token function">enable</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Disable listening for new asynchronous events.</span>
+asyncHook<span class="token punctuation">.</span><span class="token function">disable</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//</span>
+<span class="token comment">// The following are the callbacks that can be passed to createHook().</span>
+<span class="token comment">//</span>
+
+<span class="token comment">// init is called during object construction. The resource may not have</span>
+<span class="token comment">// completed construction when this callback runs, therefore all fields of the</span>
+<span class="token comment">// resource referenced by &quot;asyncId&quot; may not have been populated.</span>
+<span class="token keyword">function</span> <span class="token function">init</span><span class="token punctuation">(</span><span class="token parameter">asyncId<span class="token punctuation">,</span> type<span class="token punctuation">,</span> triggerAsyncId<span class="token punctuation">,</span> resource</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span>
+
+<span class="token comment">// Before is called just before the resource's callback is called. It can be</span>
+<span class="token comment">// called 0-N times for handles (e.g. TCPWrap), and will be called exactly 1</span>
+<span class="token comment">// time for requests (e.g. FSReqCallback).</span>
+<span class="token keyword">function</span> <span class="token function">before</span><span class="token punctuation">(</span><span class="token parameter">asyncId</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span>
+
+<span class="token comment">// After is called just after the resource's callback has finished.</span>
+<span class="token keyword">function</span> <span class="token function">after</span><span class="token punctuation">(</span><span class="token parameter">asyncId</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span>
+
+<span class="token comment">// Destroy is called when the resource is destroyed.</span>
+<span class="token keyword">function</span> <span class="token function">destroy</span><span class="token punctuation">(</span><span class="token parameter">asyncId</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span>
+
+<span class="token comment">// promiseResolve is called only for promise resources, when the</span>
+<span class="token comment">// `resolve` function passed to the `Promise` constructor is invoked</span>
+<span class="token comment">// (either directly or through other means of resolving a promise).</span>
+<span class="token keyword">function</span> <span class="token function">promiseResolve</span><span class="token punctuation">(</span><span class="token parameter">asyncId</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span>
+
+</code></pre></div><h2 id="应用"><a href="#应用" class="header-anchor">#</a> 应用</h2> <div class="language-js extra-class"><pre class="language-js"><code>
+<span class="token keyword">var</span> asyncHooks <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'async_hooks'</span><span class="token punctuation">)</span>
+<span class="token keyword">var</span> http <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'http'</span><span class="token punctuation">)</span>
+<span class="token keyword">var</span> fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'fs'</span><span class="token punctuation">)</span>
+
+<span class="token keyword">var</span> hooks <span class="token operator">=</span> <span class="token punctuation">{</span>
+  init<span class="token operator">:</span> init
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> asyncHook <span class="token operator">=</span> asyncHooks<span class="token punctuation">.</span><span class="token function">createHook</span><span class="token punctuation">(</span>hooks<span class="token punctuation">)</span>
+asyncHook<span class="token punctuation">.</span><span class="token function">enable</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+http<span class="token punctuation">.</span><span class="token function">createServer</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  res<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token string">'hello qts'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span><span class="token number">8079</span><span class="token punctuation">)</span>
+
+<span class="token keyword">function</span> <span class="token function">init</span> <span class="token punctuation">(</span><span class="token parameter">asyncId<span class="token punctuation">,</span> type<span class="token punctuation">,</span> triggerId</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    fs<span class="token punctuation">.</span><span class="token function">writeSync</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>type<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> \n</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">10/13/2020, 8:58:14 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/pxfed/nodejs/" class="prev router-link-active">
+        介绍
+      </a></span> <span class="next"><a href="/pxfed/nodejs/buffer.html">
+        Buffer
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/pxfed/assets/js/app.391c752e.js" defer></script><script src="/pxfed/assets/js/2.197eb809.js" defer></script><script src="/pxfed/assets/js/17.e32d600f.js" defer></script>
+  </body>
+</html>

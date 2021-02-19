@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Vue px2rem 解决方案 | PXFED</title>
+    <meta name="generator" content="VuePress 1.6.0">
+    <link rel="icon" href="/pxfed/favicon.ico">
+    <meta name="description" content="Just playing around">
+    <link rel="preload" href="/pxfed/assets/css/0.styles.79d2b74d.css" as="style"><link rel="preload" href="/pxfed/assets/js/app.391c752e.js" as="script"><link rel="preload" href="/pxfed/assets/js/2.197eb809.js" as="script"><link rel="preload" href="/pxfed/assets/js/38.1210eda9.js" as="script"><link rel="prefetch" href="/pxfed/assets/js/10.f981e27f.js"><link rel="prefetch" href="/pxfed/assets/js/11.50cedf1f.js"><link rel="prefetch" href="/pxfed/assets/js/12.5eaf23ae.js"><link rel="prefetch" href="/pxfed/assets/js/13.51a07a3e.js"><link rel="prefetch" href="/pxfed/assets/js/14.6499c987.js"><link rel="prefetch" href="/pxfed/assets/js/15.00256b2a.js"><link rel="prefetch" href="/pxfed/assets/js/16.b5fe4aca.js"><link rel="prefetch" href="/pxfed/assets/js/17.e32d600f.js"><link rel="prefetch" href="/pxfed/assets/js/18.b1e50332.js"><link rel="prefetch" href="/pxfed/assets/js/19.d1de6dc1.js"><link rel="prefetch" href="/pxfed/assets/js/20.a3867248.js"><link rel="prefetch" href="/pxfed/assets/js/21.ecaaacfc.js"><link rel="prefetch" href="/pxfed/assets/js/22.180ace57.js"><link rel="prefetch" href="/pxfed/assets/js/23.f07d1b4f.js"><link rel="prefetch" href="/pxfed/assets/js/24.51665be9.js"><link rel="prefetch" href="/pxfed/assets/js/25.053f7e9a.js"><link rel="prefetch" href="/pxfed/assets/js/26.cb3007ea.js"><link rel="prefetch" href="/pxfed/assets/js/27.e00f13e6.js"><link rel="prefetch" href="/pxfed/assets/js/28.6595e37e.js"><link rel="prefetch" href="/pxfed/assets/js/29.9750a7bb.js"><link rel="prefetch" href="/pxfed/assets/js/3.9f21a8e2.js"><link rel="prefetch" href="/pxfed/assets/js/30.f97323f5.js"><link rel="prefetch" href="/pxfed/assets/js/31.00250396.js"><link rel="prefetch" href="/pxfed/assets/js/32.f4b3cf1e.js"><link rel="prefetch" href="/pxfed/assets/js/33.50557d64.js"><link rel="prefetch" href="/pxfed/assets/js/34.0e0bb241.js"><link rel="prefetch" href="/pxfed/assets/js/35.e507bf03.js"><link rel="prefetch" href="/pxfed/assets/js/36.545140ca.js"><link rel="prefetch" href="/pxfed/assets/js/37.4333939e.js"><link rel="prefetch" href="/pxfed/assets/js/39.5e31bab1.js"><link rel="prefetch" href="/pxfed/assets/js/4.f23e151d.js"><link rel="prefetch" href="/pxfed/assets/js/40.705d7c1d.js"><link rel="prefetch" href="/pxfed/assets/js/41.33c976ce.js"><link rel="prefetch" href="/pxfed/assets/js/42.1ced0f2e.js"><link rel="prefetch" href="/pxfed/assets/js/43.4b446d33.js"><link rel="prefetch" href="/pxfed/assets/js/44.402b0312.js"><link rel="prefetch" href="/pxfed/assets/js/45.e933ff8c.js"><link rel="prefetch" href="/pxfed/assets/js/46.426aa448.js"><link rel="prefetch" href="/pxfed/assets/js/47.686c8539.js"><link rel="prefetch" href="/pxfed/assets/js/48.0ab858a7.js"><link rel="prefetch" href="/pxfed/assets/js/5.ff934079.js"><link rel="prefetch" href="/pxfed/assets/js/6.761b8afb.js"><link rel="prefetch" href="/pxfed/assets/js/7.d9e89e79.js"><link rel="prefetch" href="/pxfed/assets/js/8.898087c3.js"><link rel="prefetch" href="/pxfed/assets/js/9.ccb0218d.js">
+    <link rel="stylesheet" href="/pxfed/assets/css/0.styles.79d2b74d.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/pxfed/" class="home-link router-link-active"><img src="/pxfed/logo.png" alt="PXFED" class="logo"> <span class="site-name can-hide">PXFED</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/pxfed/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/pxfed/esx/" class="nav-link">
+  Esx
+</a></div><div class="nav-item"><a href="/pxfed/vue/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/pxfed/nodejs/" class="nav-link">
+  Nodejs
+</a></div><div class="nav-item"><a href="/pxfed/solutions/" class="nav-link router-link-active">
+  Solutions
+</a></div><div class="nav-item"><a href="/pxfed/db/" class="nav-link">
+  DB
+</a></div><div class="nav-item"><a href="/pxfed/dv/" class="nav-link">
+  Dv
+</a></div><div class="nav-item"><a href="/pxfed/py/" class="nav-link">
+  Py
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/pxfed/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/pxfed/esx/" class="nav-link">
+  Esx
+</a></div><div class="nav-item"><a href="/pxfed/vue/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/pxfed/nodejs/" class="nav-link">
+  Nodejs
+</a></div><div class="nav-item"><a href="/pxfed/solutions/" class="nav-link router-link-active">
+  Solutions
+</a></div><div class="nav-item"><a href="/pxfed/db/" class="nav-link">
+  DB
+</a></div><div class="nav-item"><a href="/pxfed/dv/" class="nav-link">
+  Dv
+</a></div><div class="nav-item"><a href="/pxfed/py/" class="nav-link">
+  Py
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Solutions</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/pxfed/solutions/" aria-current="page" class="sidebar-link">介绍</a></li><li><a href="/pxfed/solutions/rem.html" aria-current="page" class="active sidebar-link">Vue px2rem 解决方案</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pxfed/solutions/rem.html#vuecli3-vant-rem-解决方案" class="sidebar-link">vueCLI3 vant rem 解决方案</a></li></ul></li><li><a href="/pxfed/solutions/app.html" class="sidebar-link">行业应用</a></li><li><a href="/pxfed/solutions/axios.html" class="sidebar-link">axios</a></li><li><a href="/pxfed/solutions/im.html" class="sidebar-link">即时通讯功能清单</a></li><li><a href="/pxfed/solutions/jsdoc.html" class="sidebar-link">jsdoc</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="vue-px2rem-解决方案"><a href="#vue-px2rem-解决方案" class="header-anchor">#</a> Vue px2rem 解决方案</h1> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">npm</span> i -D postcss-plugin-px2rem
+</code></pre></div><p>vue.config.js</p> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  css<span class="token operator">:</span> <span class="token punctuation">{</span>
+    loaderOptions<span class="token operator">:</span> <span class="token punctuation">{</span>
+      postcss<span class="token operator">:</span> <span class="token punctuation">{</span>
+        plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+          <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'postcss-plugin-px2rem'</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+            rootValue<span class="token operator">:</span> <span class="token number">20</span><span class="token punctuation">,</span> <span class="token comment">//换算基数， 默认100  ，这样的话把根标签的字体规定为1rem为50px,这样就可以从设计稿上量出多少个px直接在代码中写多上px了。</span>
+            <span class="token comment">// unitPrecision: 5, //允许REM单位增长到的十进制数字。</span>
+            <span class="token comment">//propWhiteList: [],  //默认值是一个空数组，这意味着禁用白名单并启用所有属性。</span>
+            <span class="token comment">// propBlackList: [], //黑名单</span>
+            exclude<span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">(node_module)</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span> <span class="token comment">//默认false，可以（reg）利用正则表达式排除某些文件夹的方法，例如/(node_module)/ 。如果想把前端UI框架内的px也转换成rem，请把此属性设为默认值</span>
+            <span class="token comment">// selectorBlackList: [], //要忽略并保留为px的选择器</span>
+            <span class="token comment">// ignoreIdentifier: false,  //（boolean/string）忽略单个属性的方法，启用ignoreidentifier后，replace将自动设置为true。</span>
+            <span class="token comment">// replace: true, // （布尔值）替换包含REM的规则，而不是添加回退。</span>
+            mediaQuery<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token comment">//（布尔值）允许在媒体查询中转换px。</span>
+            minPixelValue<span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token comment">//设置要替换的最小像素值(3px会被转rem)。 默认 0</span>
+          <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="vuecli3-vant-rem-解决方案"><a href="#vuecli3-vant-rem-解决方案" class="header-anchor">#</a> vueCLI3 vant rem 解决方案</h2> <ul><li>自动按需引入组件</li></ul> <div class="language-js extra-class"><pre class="language-js"><code>npm i babel<span class="token operator">-</span>plugin<span class="token operator">-</span><span class="token keyword">import</span> <span class="token operator">-</span><span class="token constant">D</span>
+<span class="token comment">// babel-plugin-import 是一款 babel 插件，它会在编译过程中将 import 的写法自动转换为按需引入的方式</span>
+
+
+<span class="token comment">//babel.config.js</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span> plugins<span class="token operator">:</span> <span class="token punctuation">[</span> <span class="token punctuation">[</span><span class="token string">'import'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> libraryName<span class="token operator">:</span> <span class="token string">'vant'</span><span class="token punctuation">,</span> libraryDirectory<span class="token operator">:</span> <span class="token string">'es'</span><span class="token punctuation">,</span> style<span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token string">'vant'</span><span class="token punctuation">]</span> <span class="token punctuation">]</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 接着你可以在代码中直接引入 Vant 组件</span>
+<span class="token comment">// 通过配置会自动引入样式</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Button <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vant'</span>
+
+<span class="token comment">//注意： 配置按需加载后不允许全局引入</span>
+<span class="token keyword">import</span> Vant <span class="token keyword">from</span> <span class="token string">'vant'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">'vant/lib/index.css'</span><span class="token punctuation">;</span>
+
+Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>Vant<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//Uncaught ReferenceError: Vant is not defined</span>
+
+</code></pre></div><ul><li>px 单位转化为 rem</li></ul> <div class="language-js extra-class"><pre class="language-js"><code>
+npm install autoprefixer postcss<span class="token operator">-</span>pxtorem <span class="token operator">--</span>save<span class="token operator">-</span>dev
+<span class="token comment">//vue.config.js</span>
+
+<span class="token keyword">const</span> autoprefixer <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'autoprefixer'</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> pxtorem <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'postcss-pxtorem'</span><span class="token punctuation">)</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  css<span class="token operator">:</span> <span class="token punctuation">{</span>
+    loaderOptions<span class="token operator">:</span> <span class="token punctuation">{</span>
+      postcss<span class="token operator">:</span> <span class="token punctuation">{</span>
+        plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+          <span class="token function">autoprefixer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+          <span class="token function">pxtorem</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+            rootValue<span class="token operator">:</span> <span class="token number">37.5</span><span class="token punctuation">,</span> <span class="token comment">//对于宽度为750px的设计图，由于rootValue: 37.5为基准，在写css时候设计图上文字大小多少像素就写多少像素即可</span>
+            propList<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'*'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token comment">// 该项仅在使用 Circle 组件时需要</span>
+            <span class="token comment">// 原因参见 https://github.com/youzan/vant/issues/1948</span>
+            selectorBlackList<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'van-circle__layer'</span><span class="token punctuation">]</span>
+          <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">]</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+</code></pre></div><ul><li>rem 适配</li></ul> <div class="language-js extra-class"><pre class="language-js"><code>
+　<span class="token comment">//安装</span>
+
+　npm i <span class="token operator">-</span><span class="token constant">S</span> amfe<span class="token operator">-</span>flexible
+
+　<span class="token comment">//main.js引入</span>
+
+  <span class="token keyword">import</span> <span class="token string">'amfe-flexible'</span>
+
+</code></pre></div><h3 id="pc-适配方案"><a href="#pc-适配方案" class="header-anchor">#</a> PC 适配方案</h3> <blockquote><p>pc 不适合 rem 方案，可选择自适应布局</p></blockquote></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">1/8/2021, 5:59:54 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/pxfed/solutions/" class="prev router-link-active">
+        介绍
+      </a></span> <span class="next"><a href="/pxfed/solutions/app.html">
+        行业应用
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/pxfed/assets/js/app.391c752e.js" defer></script><script src="/pxfed/assets/js/2.197eb809.js" defer></script><script src="/pxfed/assets/js/38.1210eda9.js" defer></script>
+  </body>
+</html>
