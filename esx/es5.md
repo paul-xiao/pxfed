@@ -118,9 +118,146 @@ Access-Control-Max-Age: 86400
 
 ## 高级函数
 
-> refs
+## 高级定时器
+
+- 函数节流
+
+> 某些代码不可以在没有间断的情况连续重复执行（高频更改可能导致浏览器崩溃）,可以使用定时器对该函数进行节流
+
+```js
+function throttle(method, context) {
+  clearTimeout(method.tId)
+  method.tId = setTimeout(function() {
+    method.call(context)
+  }, 100)
+}
+```
+
+- 函数防抖
+
+> 是函数在特定的时间内不被再调用后执行
+
+这是未做防抖处理的代码
+
+```js
+inputEle.addEventListener('keyup', function(e) {
+  //ajax(...); 发送请求到服务器
+})
+```
+
+这是做了防抖处理的代码（未优化版本）
+
+```js
+inputEle.addEventListener(
+  'keyup',
+  (function(e) {
+    //这是一个自运行函数
+    var t = null
+    return function() {
+      //真正的事件函数在这里
+      clearTimeout(t) //每次触发，都把前面的定时器关闭，尽管第一次定时器并不存在
+      t = setTimeout(function() {
+        //开启新的定时器
+        //ajax(...); 发送请求到服务器
+      }, 300)
+    }
+  })()
+)
+```
+
+- 函数防抖和函数节流区别
+
+```js
+//每隔一段时间，只执行一次函数。
+function throttle(fn, delay) {
+  var timer
+  return function() {
+    var _this = this
+    var args = arguments
+    if (timer) {
+      return
+    }
+    timer = setTimeout(function() {
+      fn.apply(_this, args)
+      timer = null // 在delay后执行完fn之后清空timer，此时timer为假，throttle触发可以进入计时器
+    }, delay)
+  }
+}
+
+// 在事件被触发n秒后再执行回调，如果在这n秒内又被触发，则重新计时。
+function debounce(fn, delay) {
+  var timer // 维护一个 timer
+  return function() {
+    var _this = this // 取debounce执行作用域的this
+    var args = arguments
+    if (timer) {
+      clearTimeout(timer)
+    }
+    timer = setTimeout(function() {
+      fn.apply(_this, args) // 用apply指向调用debounce的对象，相当于_this.fn(args);
+    }, delay)
+  }
+}
+```
+
+相同点：
+
+都可以通过使用 setTimeout 实现。
+目的都是，降低回调执行频率。节省计算资源。
+
+不同点：
+
+函数防抖，在一段连续操作结束后，处理回调，利用 clearTimeout 和 setTimeout 实现。函数节流，在一段连续操作中，每一段时间只执行一次，频率较高的事件中使用来提高性能。
+函数防抖关注一定时间连续触发的事件只在最后执行一次，而函数节流侧重于一段时间内只执行一次。
+
+---
+
+- 实际应用
+
+> lodash
+
+debounce
+
+```js
+// 避免窗口在变动时出现昂贵的计算开销。
+jQuery(window).on('resize', _.debounce(calculateLayout, 150))
+
+// 当点击时 `sendMail` 随后就被调用。
+jQuery(element).on(
+  'click',
+  _.debounce(sendMail, 300, {
+    leading: true,
+    trailing: false,
+  })
+)
+
+// 确保 `batchLog` 调用1次之后，1秒内会被触发。
+var debounced = _.debounce(batchLog, 250, { maxWait: 1000 })
+var source = new EventSource('/stream')
+jQuery(source).on('message', debounced)
+
+// 取消一个 trailing 的防抖动调用
+jQuery(window).on('popstate', debounced.cancel)
+```
+
+throttle
+
+```js
+// 避免在滚动时过分的更新定位
+jQuery(window).on('scroll', _.throttle(updatePosition, 100))
+
+// 点击后就调用 `renewToken`，但5分钟内超过1次。
+var throttled = _.throttle(renewToken, 300000, { trailing: false })
+jQuery(element).on('click', throttled)
+
+// 取消一个 trailing 的节流调用。
+jQuery(window).on('popstate', throttled.cancel)
+```
+
+_refs_
 
 1. [图解 JS 原型和原型链实现原理](https://www.jb51.net/article/195651.htm)
 2. [javascript-class-method-vs-class-prototype-method](https://stackoverflow.com/questions/1635116/javascript-class-method-vs-class-prototype-method)
 3. [prefilght request](https://developer.mozilla.org/zh-CN/docs/Glossary/Preflight_request)
 4. [withCredentials](https://developer.mozilla.org/zh-CN/docs/Web/API/XMLHttpRequest/withCredentials)
+5. [彻底弄懂函数防抖和函数节流](https://segmentfault.com/a/1190000018445196)

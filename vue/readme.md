@@ -2,9 +2,14 @@
 
 vue
 
+## 基础
+
+- [简述 spa](spa)
+- [如何理解 mvvm](mvvm)
+
 ## 源码分析
 
-- 响应式原理
+- [响应式原理](reactive)
 - diff 算法
 - 虚拟 DOM
 - vue-router 原理及实现

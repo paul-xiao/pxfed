@@ -28,9 +28,6 @@ npm i && npm run dev
 
 ### Todos
 
-- 2020/10/27
-  - es6 proxy
-  - vue diff 算法
-  - ts 基础类型
-  - node Stream
-  - node redis/Mq
+- 2021/2/18
+  - vue 面试题
+  - 数据可视化

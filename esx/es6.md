@@ -330,7 +330,7 @@ class MyPromise {
 
 ```js
 // tests
-MyPromise.deferred = function () {
+MyPromise.deferred = function() {
   const defer = {}
   defer.promise = new MyPromise((resolve, reject) => {
     defer.resolve = resolve
@@ -478,11 +478,11 @@ let target = {
   age: 24,
 }
 let handler = {
-  get: function (target, key) {
+  get: function(target, key) {
     console.log('getting ' + key)
     return target[key] // 不是target.key
   },
-  set: function (target, key, value) {
+  set: function(target, key, value) {
     console.log('setting ' + key)
     target[key] = value
   },
@@ -585,7 +585,7 @@ Reflect.setPrototypeOf(target, prototype)
 const duck = {
   name: 'Maurice',
   color: 'white',
-  greeting: function () {
+  greeting: function() {
     console.log(`Quaaaack! My name is ${this.name}`)
   },
 }
@@ -602,3 +602,12 @@ Reflect.set(duck, 'eyes', 'black')
 // returns "true" if successful
 // "duck" now contains the property "eyes: 'black'"
 ```
+
+## 微任务和宏任务
+
+|                      | 宏任务（macrotask）                                                                                                                                 | 微任务（microtask）                                                                                      |
+| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| 谁发起的             | 宿主（Node、浏览器）                                                                                                                                | JS 引擎                                                                                                  |
+| 具体事件             | 1. script (可以理解为外层同步代码) 2. setTimeout/setInterval 3. UI rendering/UI 事件 4. postMessage，MessageChannel 5. setImmediate，I/O（Node.js） | 1. Promise 2. MutaionObserver 3. Object.observe（已废弃；Proxy 对象替代） 4. process.nextTick（Node.js） |
+| 谁先运行             | 后运行                                                                                                                                              | 先运行                                                                                                   |
+| 会触发新一轮 Tick 吗 | 会                                                                                                                                                  | 不会                                                                                                     |

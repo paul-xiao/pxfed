@@ -1,5 +1,6 @@
 module.exports = {
   title: 'PXFED',
+  //base: '/pxfed/',
   description: 'Just playing around',
   head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
   themeConfig: {
@@ -66,7 +67,7 @@ module.exports = {
       ],
       '/db/': [
         {
-          title: 'mysql',
+          title: 'db',
           collapsable: false,
           children: [['', '介绍'], 'mysql'],
         },
