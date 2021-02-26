@@ -254,7 +254,55 @@ jQuery(element).on('click', throttled)
 jQuery(window).on('popstate', throttled.cancel)
 ```
 
-_refs_
+## call/apply/bind 的区别
+
+1、call(object,arg1,arg2) ，call 方法的第一个参数是函数中 this 重新指向的对象，剩下的参数是传入该函数的形参
+
+不传，或者传 null,undefined， 函数中的 this 指向 window 对象，传递另一个函数的函数名，函数中的 this 指向这个函数的引用，传递字符串、数值或布尔类型等基础类型，函数中的 this 指向其对应的包装对象，如 String、Number、Boolean，传递一个对象，函数中的 this 指向这个对象。
+
+2、apply(object,[arg1,arg2])，apply 方法的第一个参数是函数中 this 重新指向的对象，第二个参数数组是传入该函数的形参；和 call 方法唯一区别是第二参数的传递形式是数组
+
+3、bind(object,arg1,arg2) ，bind 方法是 ES5 新增的一个方法，传参和 call 方法一致。与 call、apply 方法的区别是，call 和 apply 方法会对目标函数进行自动执行，会返回一个新的函数。call 和 apply 无法在事件绑定函数中使用。而 bind 弥补了这个缺陷，在实现改变函数 this 的同时又不会自动执行目标函数，因此可以完美的解决上述问题，
+
+## 闭包
+
+> 闭包是指有权访问另一个函数作用域中的变量的函数，常见创建方式是在一个函数内创建另一个函数
+
+```js
+function foo() {
+  var a = 1
+  console.log(a)
+  return function() {
+    console.log(a)
+  }
+}
+
+var b = foo()
+
+b() // 1
+
+function foo(a) {
+  return function(b, c) {
+    console.log(a)
+    console.log(b)
+    console.log(c)
+  }
+}
+
+var b = foo(1) //携带函数作用域，占用内存
+
+b(2, 3) //1 2 3
+```
+
+优点:
+
+- 数据隐藏和封装
+
+缺点：
+
+- 如果不是某些特定任务需要使用闭包，在其它函数中创建函数是不明智的，因为闭包在处理速度和内存消耗方面对脚本性能具有负面影响
+
+## _refs_
 
 1. [图解 JS 原型和原型链实现原理](https://www.jb51.net/article/195651.htm)
 2. [javascript-class-method-vs-class-prototype-method](https://stackoverflow.com/questions/1635116/javascript-class-method-vs-class-prototype-method)
